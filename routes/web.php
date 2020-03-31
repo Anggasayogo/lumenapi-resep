@@ -43,3 +43,7 @@ $router->group(['prefix' => 'api/v1','middleware' => 'auth'], function () use ($
     $router->post('/create/resep','ResepController@save');
     $router->get('/resep','ResepController@show');
 });
+
+$router->get('/test',function(){
+    return "test";
+});
