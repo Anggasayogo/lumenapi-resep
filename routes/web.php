@@ -42,4 +42,7 @@ $router->group(['prefix' => 'api/v1','middleware' => 'auth'], function () use ($
     //Resep
     $router->post('/create/resep','ResepController@save');
     $router->get('/resep','ResepController@show');
+    $router->get('/resep/detail/{id}','ResepController@details');
+    $router->delete('/resep/delete/{id}','ResepController@destroy');
+    $router->post('/resep/update/{id}','ResepController@update');
 });
